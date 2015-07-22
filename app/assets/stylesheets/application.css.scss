@@ -15,6 +15,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.navbar {
+  margin-bottom: 0px;
+}
+
 .muted {
   opacity: 0.5;
 }
