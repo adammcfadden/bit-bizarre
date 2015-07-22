@@ -1,1 +1,5 @@
-<h1>show a user</h1>
+<h1> <%= @user.email %></h1>
+
+<% if is_admin? %>
+  <%= link_to "Delete User", user_path(@user), data: {confirm: "Destroy User?", method: 'delete'}, class: "btn btn-danger btn-block" %>
+<% end %>

@@ -5,7 +5,7 @@
     <thead>
       <tr>
         <th>Email</th>
-        <% if current_user && current_user.admin? %>
+        <% if is_admin? %>
           <th>Update</th>
           <th>Delete</th>
         <% end %>
