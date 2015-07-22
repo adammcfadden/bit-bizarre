@@ -14,4 +14,18 @@ describe 'user path' do
     visit users_path
     expect(page).to have_content "not authorized"
   end
+
+  it 'will allow a user to view an item if they are logged in' do
+    user = create(:user)
+    item = create(:item, user_id: user.id)
+    login_as user, scope: :user
+    visit item_path(item)
+    expect(page).to have_content item.body
+  end
+
+  it 'will not allow a user to view an item if they are not logged in' do
+    item = create(:item)
+    visit item_path(item)
+    expect(page).to have_content "You must sign in to do this."
+  end
 end

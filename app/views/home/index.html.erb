@@ -14,15 +14,13 @@
             <div class="panel-body">
               <%= item.body %>
             </div>
-            <% if user_signed_in? %>
-              <div class="panel-footer">
-                <div class="purchase-button">
-                  <%= link_to item_path(item), class: "btn btn-success btn-block btn-sm" do %>
-                    <span class="glyphicon glyphicon-shopping-cart"> <%= number_to_currency(item.price, :unit => "$") %></span>
-                  <% end %>
-                </div>
+            <div class="panel-footer">
+              <div class="purchase-button">
+                <%= link_to item_path(item), class: "btn btn-success btn-block btn-sm" do %>
+                  <span class="glyphicon glyphicon-shopping-cart"> <%= number_to_currency(item.price, :unit => "$") %></span>
+                <% end %>
               </div>
-            <% end %>
+            </div>
           </div>
         </div>
       <% end %>

@@ -2,10 +2,12 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    authorize current_user
   end
 
   def show
     @item = Item.find(params[:id])
+    authorize current_user
   end
 
   def new
