@@ -1,1 +1,30 @@
-<h1>hi </h1>
+<h1>All Users</h1>
+
+<% if @users %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        <% if current_user && current_user.admin? %>
+          <th>Update</th>
+          <th>Delete</th>
+        <% end %>
+      </tr>
+    </thead>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.email, user_path(user) %></td>
+        <td>
+          <%= link_to edit_user_registration_path(user) do %>
+            <span class="glyphicon glyphicon-edit orange"></span>
+          <% end %>
+        </td>
+        <td>
+         <%= link_to user_path(user), data: {confirm: "Destroy User?", method: 'delete'} do %>
+           <span class="glyphicon glyphicon-remove-sign red"></span>
+         <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

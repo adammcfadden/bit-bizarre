@@ -12,4 +12,12 @@ class UsersController < ApplicationController
   def show
     @user = User.new
   end
+
+  def destroy
+    @user = User.find(params[:id])
+    authorize current_user
+    @user.destroy
+    redirect_to users_path
+  end
+
 end
