@@ -30,3 +30,13 @@
 .orange {
   color: orange;
 }
+
+body {
+  background-image: url("background.jpg");
+  background-size: 125%;
+}
+
+.panel-master {
+  margin-top: 5px;
+  background-color: rgba(211,211,211, .75)
+}
