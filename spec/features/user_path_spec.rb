@@ -15,13 +15,19 @@ describe 'user path' do
     expect(page).to have_content "not authorized"
   end
 
-  it 'will allow an admin to delte a user' do
+  it 'will allow an admin to delete a user' do
     admin = create(:admin)
     user = create(:user)
     login_as admin, scope: :user
     visit users_path
     click_link "delete_user_#{user.id}"
     expect(page).to_not have_content user.email
+  end
+
+  it 'will allow a user to view another user\'s storefront' do
+    user = create(:user)
+    visit user_path(user)
+    expect(page).to have_content user.email
   end
 
   it 'will allow a user to view an item if they are logged in' do
