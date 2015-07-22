@@ -1,5 +1,17 @@
 <h1> <%= @user.email %></h1>
 
+<% if @user.items.any? %>
+  <% @user.items.in_groups_of(3, false) do |item_group| %>
+    <div class="row">
+      <% item_group.each do |item| %>
+        <div class="col-md-4">
+          <%= item.name %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
 <% if is_admin? %>
   <%= link_to "Delete User", user_path(@user), data: {confirm: "Destroy User?", method: 'delete'}, class: "btn btn-danger btn-block" %>
 <% end %>
