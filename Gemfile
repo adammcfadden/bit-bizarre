@@ -15,6 +15,8 @@ gem 'devise'
 gem 'paperclip'
 gem 'rails_12factor'
 gem 'stripe'
+gem 'dotenv-rails'
+
 
 group :development do
   gem 'byebug'
