@@ -2,21 +2,24 @@
 
 <a href="APP LINK IF APPLICABLE" target="#"><APP LINK NAME></a>
 
-By Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
-
+By
+- Ian MacDonald (<a href="https://github.com/matchbookmac" target="#">GitHub</a>)
+- Alec Arme (<a href="https://github.com/ginkko" target="#">Github</a>)
+- Adam McFadden (<a href="https://github.com/adammcfadden" target="#">Github</a>)
+- Toby Alden (<a href="https://github.com/tobyalden" target="#">Github</a>)
 @ Epicodus Programming School, Portland, OR
 
 GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. MacDonald.
 
 ### Description
 
-**APP NAME**
+**Bit-Bizarre**
 
-<DESCRIPTION>
+Bit-Bizarre is a storefront for digital goods and uploads.
 
 ### Author(s)
 
-Ian MacDonald
+Ian MacDonald, Alec Arme, Adam McFadden, Toby Alden
 
 ### Setup
 
@@ -24,7 +27,7 @@ This app was written in `Rails '4.2.3'`.
 
 Clone this repo with
 ```console
-> git clone https://github.com/matchbookmac/<REPO NAME>.git
+> git clone https://github.com/adammcfadden/bit-bizarre.git
 ```
 
 Install gems:
@@ -44,40 +47,12 @@ Start App:
 ```console
 > rails s
 ```
-
-### Database Schema
-
-List of relations
-
-   Name     | Type  
- ---------- | -------
- <relation_0>    | table
- <relation_1>   | table
-
-<relation_0> table
-
-id  | first_name | last_name | stylist_id
-----|------------|-----------|------------
-int | varchar    | varchar   | int
-
-<relation_1> table
-
-id  | first_name | last_name
-----|------------|-----------
-int | varchar    | varchar
-
-bands_venues join table
-
-<relation_0>_id | <relation_1>_id
---------|---------
-int     | int
-
 ### License ###
 Copyright  (C)  2015  Ian C. MacDonald
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or    
+the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
