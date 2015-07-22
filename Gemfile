@@ -13,7 +13,14 @@ gem 'sass-rails', '>= 3.2'
 gem 'bootstrap_form'
 gem 'devise'
 gem 'paperclip'
-gem 'rails_12factor'
+gem 'pundit'
+gem 'stripe'
+gem 'dotenv-rails'
+
+group :production do
+  gem 'rails_12factor'
+end
+
 
 group :development do
   gem 'byebug'
