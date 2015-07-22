@@ -1,5 +1,6 @@
+<%= render 'layouts/errors', object: @item %>
 
-<%= bootstrap_form_for(Item.new) do |f| %>
+<%= bootstrap_form_for(@item) do |f| %>
   <%= f.text_field :name %>
   <%= f.text_field :body %>
   <%= f.number_field :price, step: '.01' %>
