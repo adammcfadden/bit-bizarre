@@ -10,7 +10,7 @@ By
 
 @ Epicodus Programming School, Portland, OR
 
-GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. MacDonald.
+GNU General Public License, version 3 (see below). Copyright (c) 2015 CasualWare LLC.
 
 ### Description
 
