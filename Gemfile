@@ -14,6 +14,7 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'paperclip'
 gem 'rails_12factor'
+gem 'stripe'
 
 group :development do
   gem 'byebug'

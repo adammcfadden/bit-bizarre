@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
 
   devise_for :users
+  resources :charges, only: [:new, :create]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
