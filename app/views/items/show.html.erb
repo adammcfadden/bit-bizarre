@@ -1,3 +1,5 @@
 <%= @item.name %>
 <%= @item.body %>
 <%= number_to_currency(@item.price, unit: '$') %>
+
+<%= render template: "charges/new", item: @item %>
