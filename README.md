@@ -7,6 +7,7 @@ By
 - Alec Arme (<a href="https://github.com/ginkko" target="#">Github</a>)
 - Adam McFadden (<a href="https://github.com/adammcfadden" target="#">Github</a>)
 - Toby Alden (<a href="https://github.com/tobyalden" target="#">Github</a>)
+
 @ Epicodus Programming School, Portland, OR
 
 GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. MacDonald.
