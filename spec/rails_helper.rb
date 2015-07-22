@@ -10,6 +10,12 @@ Warden.test_mode!
 
 require 'database_cleaner'
 require 'capybara/rails'
+
+
+def user_login
+  @user = FactoryGirl.create(:user)
+  login_as(@user, :scope => :user)
+end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
