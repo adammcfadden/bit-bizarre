@@ -47,8 +47,8 @@
         null,
         null,
         1,
-        2,
-        2,
+        4,
+        4,
         null,
         null,
         null,
@@ -703,11 +703,11 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -866,8 +866,8 @@
       "/Users/Guest/Desktop/bit-bizarre/spec/factories/users.rb": [
         1,
         1,
-        4,
-        5,
+        6,
+        7,
         1,
         null,
         1,
@@ -877,6 +877,27 @@
         null,
         1,
         null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/bit-bizarre/spec/features/items/view_items_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -937,6 +958,6 @@
         null
       ]
     },
-    "timestamp": 1437606581
+    "timestamp": 1437607145
   }
 }
