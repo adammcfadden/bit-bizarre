@@ -5,8 +5,32 @@
         1,
         null,
         1,
+<<<<<<< HEAD
+=======
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -23,6 +47,15 @@
         null,
         1,
         1,
+<<<<<<< HEAD
+=======
+        null,
+        null,
+        1,
+        4,
+        4,
+        null,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null,
         null,
@@ -617,7 +650,10 @@
         1,
         1,
         1,
+<<<<<<< HEAD
         4,
+=======
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null,
         1,
@@ -627,12 +663,15 @@
         1,
         1,
         1,
+<<<<<<< HEAD
         null,
         null,
         1,
         1,
         1,
         null,
+=======
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null
       ],
@@ -673,8 +712,13 @@
         1,
         null,
         1,
+<<<<<<< HEAD
         2,
         2,
+=======
+        5,
+        5,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null
       ],
@@ -682,6 +726,7 @@
         1,
         null,
         1,
+<<<<<<< HEAD
         0,
         0,
         null,
@@ -689,23 +734,31 @@
         1,
         2,
         2,
-        null,
-        null,
+=======
         1,
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
-        0,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        null,
+        1,
         null,
         null,
         null,
         1,
         1,
-        0,
+        2,
         null,
         null,
         null,
@@ -714,8 +767,18 @@
       "/Users/Guest/Desktop/bit-bizarre/app/controllers/users_controller.rb": [
         1,
         1,
+<<<<<<< HEAD
         4,
         4,
+=======
+        2,
+        2,
+        2,
+        null,
+        0,
+        0,
+        null,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null,
         1,
@@ -739,7 +802,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null
       ],
@@ -827,11 +890,16 @@
         1,
         null,
         1,
+<<<<<<< HEAD
         1,
         1,
         1,
         1,
         1,
+=======
+        2,
+        2,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null,
         1,
@@ -851,9 +919,15 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         1,
         1,
         1,
+=======
+        2,
+        2,
+        null,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null,
         1,
@@ -891,11 +965,93 @@
         2,
         null,
         1,
+<<<<<<< HEAD
         1,
         1,
         20,
         null,
         1,
+=======
+        6,
+        7,
+        1,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/bit-bizarre/spec/features/items/view_items_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/bit-bizarre/spec/features/user_path_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/bit-bizarre/spec/features/visit_root_path_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/bit-bizarre/spec/models/item_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        1,
+        1,
+        1,
+        20,
+        null,
+        1,
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
         null,
         null,
         null
@@ -909,6 +1065,10 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1437607248
+=======
+    "timestamp": 1437607145
+>>>>>>> 23c6c8c2b235c2495749ee8a71024fadd1cff897
   }
 }
