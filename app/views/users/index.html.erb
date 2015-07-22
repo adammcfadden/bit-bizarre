@@ -20,7 +20,7 @@
           <% end %>
         </td>
         <td>
-         <%= link_to user_path(user), data: {confirm: "Destroy User?", method: 'delete'} do %>
+         <%= link_to user_path(user), data: {confirm: "Destroy User?", method: 'delete'}, id: "delete_user_#{user.id}" do %>
            <span class="glyphicon glyphicon-remove-sign red"></span>
          <% end %>
         </td>
