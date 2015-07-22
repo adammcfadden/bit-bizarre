@@ -6,12 +6,6 @@ class UserPolicy
     @target_user = target_user
   end
 
-  def edit?
-    if @current_user
-      @current_user.admin? || @current_user == @target_user
-    end
-  end
-
   def destroy?
     @current_user.admin? || @current_user == @target_user
   end
