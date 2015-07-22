@@ -14,10 +14,13 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'paperclip'
 gem 'pundit'
+gem 'stripe'
+gem 'dotenv-rails'
 
 group :production do
   gem 'rails_12factor'
 end
+
 
 group :development do
   gem 'byebug'
