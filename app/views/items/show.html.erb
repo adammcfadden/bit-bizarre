@@ -3,3 +3,5 @@
 <%= number_to_currency(@item.price, unit: '$') %>
 
 <%= render template: "charges/new", item: @item %>
+
+<%= link_to 'Delete Item', item_path(@item), method: :delete %>
