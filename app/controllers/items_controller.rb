@@ -23,9 +23,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+      item = Item.find(params[:id])
+      item.destroy
+      @posts = Item.all
+      redirect_to root_path
+  end
+
   private
   def item_params
-    params.require(:item).permit(:name, :body, :price, :user_id)
+    params.require(:item).permit(:name, :body, :price, :user_id, :avatar)
   end
 
 

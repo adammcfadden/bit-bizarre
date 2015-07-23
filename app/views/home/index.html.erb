@@ -13,6 +13,9 @@
             <div class="panel-heading"><%= item.name %></div>
             <div class="panel-body">
               <%= item.body %>
+              <% if item.avatar_file_name != nil %>
+                <%= image_tag item.avatar.url(:medium) %>
+              <% end %>
             </div>
             <div class="panel-footer">
               <div class="purchase-button">
