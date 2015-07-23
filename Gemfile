@@ -17,6 +17,7 @@ gem 'pundit'
 gem 'stripe'
 gem 'dotenv-rails'
 gem 'faker'
+gem 'will_paginate'
 
 group :production do
   gem 'rails_12factor'
