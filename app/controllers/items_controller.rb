@@ -1,17 +1,18 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.all
-    authorize current_user
+    authorize @items
   end
 
   def show
-    @item = Item.find(params[:id])
-    authorize current_user
+    authorize @item
   end
 
   def new
     @item = Item.new
+    authorize @item
   end
 
   def create
@@ -23,17 +24,34 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    authorize @item
+  end
+
+  def update
+    if @item.update(item_params)
+      flash[:notice] = "Item updated!"
+      redirect_to item_path(@item)
+    else
+      render :edit
+    end
+  end
+
   def destroy
-      item = Item.find(params[:id])
-      item.destroy
-      @posts = Item.all
-      redirect_to root_path
+    authorize @item
+    @item.destroy
+    @posts = Item.all
+    redirect_to root_path
   end
 
   private
+
   def item_params
     params.require(:item).permit(:name, :body, :price, :user_id, :avatar)
   end
 
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
 end

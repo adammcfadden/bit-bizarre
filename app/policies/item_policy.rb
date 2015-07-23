@@ -6,6 +6,10 @@ class ItemPolicy
     @item = item
   end
 
+  def new?
+    @current_user
+  end
+
   def edit?
     if @current_user
       @current_user.admin? || @current_user == @item.user

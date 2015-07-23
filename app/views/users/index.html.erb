@@ -6,7 +6,6 @@
       <tr>
         <th>Email</th>
         <% if is_admin? %>
-          <th>Update</th>
           <th>Delete</th>
         <% end %>
       </tr>
@@ -14,11 +13,6 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= link_to user.email, user_path(user) %></td>
-        <td>
-          <%= link_to edit_user_registration_path(user) do %>
-            <span class="glyphicon glyphicon-edit orange"></span>
-          <% end %>
-        </td>
         <td>
          <%= link_to user_path(user), data: {confirm: "Destroy User?", method: 'delete'}, id: "delete_user_#{user.id}" do %>
            <span class="glyphicon glyphicon-remove-sign red"></span>
