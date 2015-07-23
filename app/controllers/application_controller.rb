@@ -19,6 +19,7 @@ private
     redirect_to(root_path)
   end
 
+# Currently never being called, but persists as a saftey net for furture updates.
   def user_not_defined
     flash[:alert] = "You must sign in to do this."
     redirect_to(new_user_session_path)

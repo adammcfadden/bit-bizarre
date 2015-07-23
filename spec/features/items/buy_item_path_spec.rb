@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe "the buy item path", js: true do
+# This test is dependent on the animation finishing, and therefore Capybara's default wait time to be extended. If failing, extend the 'Capybara.default_wait_time' in spec_helper.rb
   it "will let a user purchase an item" do
     item = create(:item)
     user = create(:user)
