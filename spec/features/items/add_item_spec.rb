@@ -15,6 +15,11 @@ describe "The item path" do
     expect(page).to have_content("$5.58")
   end
 
+  it "will not let a user add an item if they are not logged in" do
+    visit new_item_path
+    expect(page).to have_content("You are not authorized to perform this action.")
+  end
+
   it 'lets the user destroy an item' do
      user_login
      visit '/'

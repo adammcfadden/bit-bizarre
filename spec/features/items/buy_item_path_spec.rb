@@ -7,8 +7,6 @@ describe "the buy item path", js: true do
     login_as user, scope: :user
     visit item_path(item)
     click_on "Pay with Card"
-    # stripe = page.driver.window_handles.last
-# binding.pry
     Capybara.within_frame 'stripe_checkout_app' do
       fill_in "email", with: user.email
       fill_in "card_number", with: "4242424242424242"

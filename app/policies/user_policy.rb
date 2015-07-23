@@ -16,8 +16,4 @@ class UserPolicy
     end
   end
 
-  def show?
-   @current_user
-  end
-
 end
