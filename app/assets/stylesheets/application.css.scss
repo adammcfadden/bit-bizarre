@@ -45,3 +45,17 @@ body {
   width: 100%;
   margin-top: 4px;
 }
+
+table th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+table th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+table th .desc {
+  background-image: url(/images/down_arrow.gif);
+}
