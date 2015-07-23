@@ -1,5 +1,8 @@
 <%= @item.name %>
 <%= @item.body %>
 <%= number_to_currency(@item.price, unit: '$') %>
+<%= image_tag @item.avatar.url(:medium) %>
 
 <%= render template: "charges/new", item: @item %>
+
+<%= link_to 'Delete Item', item_path(@item), method: :delete %>
