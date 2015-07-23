@@ -41,6 +41,6 @@ describe 'user path' do
   it 'will not allow a user to view an item if they are not logged in' do
     item = create(:item)
     visit item_path(item)
-    expect(page).to have_content "You must sign in to do this."
+    expect(page).to have_content "You are not authorized"
   end
 end

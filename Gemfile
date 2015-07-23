@@ -43,4 +43,5 @@ group :test do
   gem 'capybara'
   gem 'simplecov', require: false
   gem 'poltergeist'
+  gem 'selenium-webdriver'
 end
