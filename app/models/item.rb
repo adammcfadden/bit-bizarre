@@ -10,4 +10,12 @@ class Item < ActiveRecord::Base
   def self.most_recent
     order(created_at: :desc)[0..5]
   end
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
 end

@@ -48,6 +48,21 @@ Start App:
 ```console
 > rails s
 ```
+Navigate to localhost:3000 in your browser.
+
+Seeding Test Data:
+```console
+> rake db:seed
+```
+Seeding includes dynamically generated items and two users.
+The admin user is:
+- Email: dave@dave.com
+- Password: asdfghjkl
+
+The standard user is:
+- Email: sam@sam.com
+- Password: asdfghjkl
+
 ### License ###
 Copyright  (C)  2015  CasualWare LLC
 

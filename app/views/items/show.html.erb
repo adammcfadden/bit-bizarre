@@ -1,11 +1,16 @@
-<%= @item.name %>
-<%= @item.body %>
-<%= number_to_currency(@item.price, unit: '$') %>
+<h3><%= @item.name %> - <small class="muted green"><strong><%= number_to_currency(@item.price, unit: '$') %><strong></small></h3>
+  <% if is_admin? || current_user == @item.user %>
+    <div class="btn-group text-center">
+      <%= link_to 'Edit Item', edit_item_path(@item), class: "btn btn-warning" %>
+      <%= link_to 'Delete Item', item_path(@item), method: :delete, class: "btn btn-danger" %>
+    </div>
+  <% end %>
+<hr>
+
+<p><%= @item.body %></p>
 <% if @item.avatar_file_name != nil %>
-  <%= image_tag @item.avatar.url(:medium) %>
+  <%= image_tag @item.avatar.url(:medium), class: "img-responsive img-rounded" %>
 <% end %>
-
+<hr>
 <%= render template: "charges/new", item: @item %>
-
-<%= link_to 'Edit Item', edit_item_path(@item) %>
-<%= link_to 'Delete Item', item_path(@item), method: :delete %>
+<br>

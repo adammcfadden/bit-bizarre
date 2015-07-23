@@ -20,13 +20,14 @@
       <div class="navbar-collapse collapse">
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-left">
+            <li><%= link_to 'Add Item', new_item_path %></li>
+            <li><%= link_to 'Items', items_path %></li>
               <!-- Standard links go here -->
           </ul>
         <% end %>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="navbar-text">Logged in as <strong><%= current_user.email %></strong></li>
-          <li><%= link_to 'Add Item', new_item_path %></li>
           <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>

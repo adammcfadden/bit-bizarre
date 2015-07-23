@@ -1,13 +1,32 @@
 <h1>WELCOME 2 BITBIZARRE NEOPHYTE</h1>
 
-<ul>
-  <% @items.each do |item| %>
-    <li><%= link_to item.name, item_path(item) %></li>
-  <% end %>
-</ul>
+<%= form_tag items_path, method: 'get' do %>
+  <%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
 
+<table class="table table-condensed">
+  <thead>
+    <th> <%= sortable "name" %></th>
+    <th> <%= sortable "price" %></th>
+    <th> <%= sortable "created_at" %></th>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= link_to item.name, item_path(item) %></td>
+        <td><%= number_to_currency(item.price, unit: "$") %></td>
+        <td><i><%= "#{time_ago_in_words(item.created_at)} ago" %></i></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
+<%= will_paginate @items %>
+
+<hr>
 <% if current_user %>
-<h3>SELL SOME WARES??</h3>
-<%= link_to "New Item", new_item_path, class: "btn btn-block" %>
+  <%= link_to "New Item", new_item_path, class: "btn btn-info btn-block" %>
 <% end %>

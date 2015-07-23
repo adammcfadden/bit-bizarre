@@ -20,6 +20,7 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
+# Currently never being called, but persists as a saftey net for furture updates.
   rescue Stripe::CardError => e
     flash[:alert] = e.message
     redirect_to charges_path

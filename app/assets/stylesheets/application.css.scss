@@ -31,6 +31,10 @@
   color: orange;
 }
 
+.green {
+  color: green;
+}
+
 body {
   background-image: url("background.jpg");
   background-size: 125%;
@@ -39,4 +43,23 @@ body {
 .panel-master {
   margin-top: 5px;
   background-color: rgba(211,211,211, .75)
+}
+
+.image-fit-to-panel {
+  width: 100%;
+  margin-top: 4px;
+}
+
+table th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+table th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+table th .desc {
+  background-image: url(/images/down_arrow.gif);
 }
