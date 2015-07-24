@@ -16,4 +16,4 @@
 /coverage
 
 # Ignore Paperclip Dev Files
-/public/system/items/attached_files/*
+/public/system/items/*
