@@ -19,7 +19,7 @@ users = User.create([
     password_confirmation: "asdfghjkl"
   }
   ])
-  
+
 20.times do
   users << FactoryGirl.create(:user)
 end
@@ -32,4 +32,12 @@ end
                       price: Faker::Commerce.price,
                       user_id: rand(1..users.length),
                       avatar: Faker::Avatar.image)
+end
+
+# Set favicon randomly on seed
+Net::HTTP.start("robohash.org") do |http|
+  r = http.get("/#{Faker::Lorem.word}.png?size=16x16")
+  File.open("./app/assets/images/favicon.png", "wb") do |file|
+    file.write(r.body)
+  end
 end
