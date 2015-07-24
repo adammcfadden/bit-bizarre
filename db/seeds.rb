@@ -8,13 +8,28 @@
 
 users = User.create([
   {
-    email: "dave@dave.com", password: "asdfghjkl", password_confirmation: "asdfghjkl", admin: true
+    email: "dave@dave.com",
+    password: "asdfghjkl",
+    password_confirmation: "asdfghjkl",
+    admin: true
   },
   {
-    email: "sam@sam.com", password: "asdfghjkl", password_confirmation: "asdfghjkl"
+    email: "sam@sam.com",
+    password: "asdfghjkl",
+    password_confirmation: "asdfghjkl"
   }
   ])
+  
+20.times do
+  users << FactoryGirl.create(:user)
+end
 
-5.times do
-  FactoryGirl.create(:item, name: Faker::Commerce.product_name, body: Faker::Lorem.paragraph(2), price: Faker::Commerce.price, user_id: users.first.id, avatar: Faker::Avatar.image)
+
+100.times do
+  FactoryGirl.create(:item,
+                      name: Faker::Commerce.product_name,
+                      body: Faker::Lorem.paragraph(2),
+                      price: Faker::Commerce.price,
+                      user_id: rand(1..users.length),
+                      avatar: Faker::Avatar.image)
 end

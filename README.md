@@ -63,6 +63,11 @@ The standard user is:
 - Email: sam@sam.com
 - Password: asdfghjkl
 
+In order to test Stripe, you will need a .env file with
+PUBLISHABLE_KEY
+SECRET_KEY
+set to test keys on an active stripe account
+
 ### License ###
 Copyright  (C)  2015  CasualWare LLC
 
