@@ -2,7 +2,7 @@
   <% item_group.each do |item| %>
     <div class="col-md-4">
       <div class="panel panel-default">
-        <div class="panel-heading text-center"><%= item.name %></div>
+        <div class="panel-heading text-center"><%= link_to item.name, item_path(item) %></div>
         <div class="panel-body">
           <%= item.body %>
           <% if item.avatar_file_name != nil %>
@@ -10,8 +10,14 @@
           <% end %>
         </div>
         <div class="panel-footer">
-          <%= link_to item_path(item), class: "btn btn-success btn-block btn-sm" do %>
-            <span class="glyphicon glyphicon-shopping-cart"> <%= number_to_currency(item.price, :unit => "$") %></span>
+          <% if current_user && current_user.cart.items.include?(item) %>
+            <%= link_to cart_path(current_user.cart, item: item), class: "btn btn-danger btn-block btn-sm", method: :patch do %>
+              <span class="glyphicon glyphicon-shopping-cart"> Remove <%= number_to_currency(item.price, :unit => "$") %></span>
+            <% end %>
+          <% else %>
+            <%= link_to new_cart_path(item: item), class: "btn btn-success btn-block btn-sm" do %>
+              <span class="glyphicon glyphicon-shopping-cart"> Add <%= number_to_currency(item.price, :unit => "$") %></span>
+            <% end %>
           <% end %>
         </div>
       </div>
