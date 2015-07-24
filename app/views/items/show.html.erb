@@ -12,7 +12,11 @@
 
 <p><%= @item.body %></p>
 <% if @item.avatar_file_name != nil %>
-  <%= image_tag @item.avatar.url(:medium), class: "img-responsive img-rounded" %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <%= image_tag @item.avatar.url(:medium), class: "img-responsive img-rounded" %>
+    </div>
+  </div>
 <% end %>
 <hr>
 <%= render template: "charges/new", item: @item %>
