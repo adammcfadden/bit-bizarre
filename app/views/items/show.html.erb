@@ -11,6 +11,5 @@
 <% if @item.avatar_file_name != nil %>
   <%= image_tag @item.avatar.url(:medium), class: "img-responsive img-rounded" %>
 <% end %>
-<hr>
-<%= render template: "charges/new", item: @item %>
-<br>
+
+<%= link_to "Add To Cart", new_cart_path(item: @item), class: "btn btn-success" %>

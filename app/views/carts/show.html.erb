@@ -1,0 +1,20 @@
+<% if current_user.cart.items.length == 0 %>
+<h3>No Items Added to Cart</h3>
+<% else %>
+  <% current_user.cart.items.each do |item| %>
+    <div class="panel">
+
+    <p><%= item.body %></p>
+    <% if item.avatar_file_name != nil %>
+      <%= image_tag item.avatar.url(:medium), class: "img-responsive img-rounded" %>
+    <% end %>
+    <p><%= number_to_currency(item.price, unit: '$')  %></p>
+    </div>
+  <% end %>
+<% end %>
+<hr>
+<h4>
+  Total Cost: <%= number_to_currency(current_user.cart.calc_cost, unit: '$') %>
+</h4>
+<%= render template: "charges/new", item: @item %>
+<br>
