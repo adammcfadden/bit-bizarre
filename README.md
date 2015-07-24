@@ -54,7 +54,14 @@ Seeding Test Data:
 ```console
 > rake db:seed
 ```
-Seeding includes dynamically generated items and two users.
+
+Seeding includes dynamically generated items and users for those items.
+
+Be warned: seeding the database creates 100 items, each with an avatar, so the
+seeding process can take some time.
+
+Users generated for testing login are:
+
 The admin user is:
 - Email: dave@dave.com
 - Password: asdfghjkl

@@ -1,4 +1,7 @@
-<h3><%= @item.name %> - <small class="muted green"><strong><%= number_to_currency(@item.price, unit: '$') %><strong></small></h3>
+<h3><%= @item.name %>
+  <small class="muted green"><strong>- <%= number_to_currency(@item.price, unit: '$') %></strong></small>
+  <span class="pull-right"> For sale by: <%= link_to @item.user.email, user_path(@item.user) %></span>
+</h3>
   <% if is_admin? || current_user == @item.user %>
     <div class="btn-group text-center">
       <%= link_to 'Edit Item', edit_item_path(@item), class: "btn btn-warning" %>
