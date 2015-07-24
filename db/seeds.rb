@@ -8,13 +8,36 @@
 
 users = User.create([
   {
-    email: "dave@dave.com", password: "asdfghjkl", password_confirmation: "asdfghjkl", admin: true
+    email: "dave@dave.com",
+    password: "asdfghjkl",
+    password_confirmation: "asdfghjkl",
+    admin: true
   },
   {
-    email: "sam@sam.com", password: "asdfghjkl", password_confirmation: "asdfghjkl"
+    email: "sam@sam.com",
+    password: "asdfghjkl",
+    password_confirmation: "asdfghjkl"
   }
   ])
 
-500.times do
-  FactoryGirl.create(:item, name: Faker::Commerce.product_name, body: Faker::Lorem.paragraph(2), price: Faker::Commerce.price, user_id: User.all.first.id)
+20.times do
+  users << FactoryGirl.create(:user)
+end
+
+
+100.times do
+  FactoryGirl.create(:item,
+                      name: Faker::Commerce.product_name,
+                      body: Faker::Lorem.paragraph(2),
+                      price: Faker::Commerce.price,
+                      user_id: rand(1..users.length),
+                      avatar: Faker::Avatar.image)
+end
+
+# Set favicon randomly on seed
+Net::HTTP.start("robohash.org") do |http|
+  r = http.get("/#{Faker::Lorem.word}.png?size=16x16")
+  File.open("./app/assets/images/favicon.png", "wb") do |file|
+    file.write(r.body)
+  end
 end

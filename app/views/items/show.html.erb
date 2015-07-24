@@ -1,4 +1,7 @@
-<h3><%= @item.name %> - <small class="muted green"><strong><%= number_to_currency(@item.price, unit: '$') %><strong></small></h3>
+<h3><%= @item.name %>
+  <small class="muted green"><strong>- <%= number_to_currency(@item.price, unit: '$') %></strong></small>
+  <span class="pull-right"> For sale by: <%= link_to @item.user.email, user_path(@item.user) %></span>
+</h3>
   <% if is_admin? || current_user == @item.user %>
     <div class="btn-group text-center">
       <%= link_to 'Edit Item', edit_item_path(@item), class: "btn btn-warning" %>
@@ -9,7 +12,11 @@
 
 <p><%= @item.body %></p>
 <% if @item.avatar_file_name != nil %>
-  <%= image_tag @item.avatar.url(:medium), class: "img-responsive img-rounded" %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <%= image_tag @item.avatar.url(:medium), class: "img-responsive img-rounded" %>
+    </div>
+  </div>
 <% end %>
 <hr>
 <%= render template: "charges/new", item: @item %>

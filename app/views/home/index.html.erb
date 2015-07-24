@@ -1,32 +1,14 @@
-<h1>Welcome to Bit-Bizarre</h1>
-<h5>The world's foremost bizarre digital goods storefront</h5>
+<h1 class="page-header text-center">
+  Welcome to Bit-Bizarre
+  <p class="lead">
+    The world's foremost bizarre goods storefront
+  </p>
+</h1>
 
-<hr>
-
-<h3>Recently Added Items</h3>
+<h3 class="text-center">Recently Added Items</h3>
+<br>
 <% if @items.any? %>
-    <% @items.most_recent.in_groups_of(3, false) do |item_group| %>
-    <div class="row">
-      <% item_group.each do |item| %>
-        <div class="col-md-4">
-          <div class="panel panel-default flex-item">
-            <div class="panel-heading"><%= item.name %></div>
-            <div class="panel-body">
-              <%= item.body %>
-              <% if item.avatar_file_name != nil %>
-                <%= image_tag item.avatar.url, class: "image-fit-to-panel img-rounded" %>
-              <% end %>
-            </div>
-            <div class="panel-footer">
-              <div class="purchase-button">
-                <%= link_to item_path(item), class: "btn btn-success btn-block btn-sm" do %>
-                  <span class="glyphicon glyphicon-shopping-cart"> <%= number_to_currency(item.price, :unit => "$") %></span>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  <% @items.most_recent.in_groups_of(3, false) do |item_group| %>
+    <%= render "items/item_block", item_group: item_group %>
   <% end %>
 <% end %>
