@@ -15,6 +15,6 @@ users = User.create([
   }
   ])
 
-500.times do
-  FactoryGirl.create(:item, name: Faker::Commerce.product_name, body: Faker::Lorem.paragraph(2), price: Faker::Commerce.price, user_id: User.all.first.id)
+5.times do
+  FactoryGirl.create(:item, name: Faker::Commerce.product_name, body: Faker::Lorem.paragraph(2), price: Faker::Commerce.price, user_id: users.first.id, avatar: Faker::Avatar.image)
 end
