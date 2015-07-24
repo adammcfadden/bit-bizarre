@@ -18,6 +18,5 @@
     </div>
   </div>
 <% end %>
-<hr>
-<%= render template: "charges/new", item: @item %>
-<br>
+
+<%= link_to "Add To Cart", new_cart_path(item: @item), class: "btn btn-success" %>

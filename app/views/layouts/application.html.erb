@@ -28,7 +28,10 @@
         <% end %>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li class="navbar-text">Logged in as <strong><%= link_to current_user.email, user_path(current_user) %></strong></li>
+          <li class="navbar-text">Logged in as <strong><%= current_user.email %></strong></li>
+          <% if current_user.cart != nil %>
+          <li><%= link_to "Cart #{number_to_currency(current_user.cart.calc_cost, unit: '$')}", cart_path(current_user.cart) %></li>
+          <% end %>
           <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% else %>

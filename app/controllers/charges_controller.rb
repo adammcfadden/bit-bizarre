@@ -5,8 +5,7 @@ class ChargesController < ApplicationController
 
   def create
     # Amount in cents
-    @item = Item.find(params[:purchase_item])
-    @amount = (@item.price * 100).to_i
+    @amount = (current_user.cart.calc_cost * 100).to_i
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
@@ -19,7 +18,9 @@ class ChargesController < ApplicationController
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
-
+    flash[:notice] = "Thank you for your purchase"
+    current_user.cart = Cart.new
+    redirect_to root_path
 # Currently never being called, but persists as a saftey net for furture updates.
   rescue Stripe::CardError => e
     flash[:alert] = e.message
