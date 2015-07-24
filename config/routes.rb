@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   resources :items
   resources :home, only: [:index]
+  resources :carts, only: [:new, :show, :update]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

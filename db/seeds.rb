@@ -25,7 +25,7 @@ users = User.create([
 end
 
 
-100.times do
+50.times do
   FactoryGirl.create(:item,
                       name: Faker::Commerce.product_name,
                       body: Faker::Lorem.paragraph(2),

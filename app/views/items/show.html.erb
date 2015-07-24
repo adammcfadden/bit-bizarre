@@ -19,5 +19,13 @@
   </div>
 <% end %>
 <hr>
-<%= render template: "charges/new", item: @item %>
+<% if current_user && current_user.cart.items.include?(@item) %>
+  <%= link_to cart_path(current_user.cart, item: @item), class: "btn btn-danger btn-block btn-sm", method: :patch do %>
+    <span class="glyphicon glyphicon-shopping-cart"> Remove <%= number_to_currency(@item.price, :unit => "$") %></span>
+  <% end %>
+<% else %>
+  <%= link_to new_cart_path(item: @item), class: "btn btn-success btn-block btn-sm" do %>
+    <span class="glyphicon glyphicon-shopping-cart"> Add <%= number_to_currency(@item.price, :unit => "$") %></span>
+  <% end %>
+<% end %>
 <br>
