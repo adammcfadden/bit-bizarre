@@ -16,6 +16,7 @@ gem 'paperclip'
 gem 'pundit'
 gem 'stripe'
 gem 'dotenv-rails'
+gem 'factory_girl_rails'
 gem 'faker'
 gem 'will_paginate'
 
@@ -35,7 +36,6 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
-  gem 'factory_girl_rails'
   gem 'database_cleaner'
 end
 
